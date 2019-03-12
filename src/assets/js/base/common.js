@@ -40,60 +40,14 @@ $(function() {
   });
 
 
-  //ScrollReveal
-  $(window).on('load', function(){
-    window.sr = ScrollReveal({
-      reset: false, //画面に登場するたびにアニメーション
-      mobile: true //モバイルでもアニメーションさせる
-    });
-
-    sr.reveal('.animation-fadein2', {
-      duration: 2000,
-      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      opacity: 0
-    });
-
-    sr.reveal('.animation-fadein3', {
-      duration: 3000,
-      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      opacity: 0
-    });
-
-    sr.reveal('.animation-bottom-delay1000', {
-      duration: 1000,
-      distance: '40px',
-      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      origin: 'bottom',
-      delay: 1000
-    });
-
-    sr.reveal('.animation-right', {
-      duration: 1000,
-      distance: '40px',
-      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      origin: 'right',
-      interval: 150,
-      viewFactor: 0.5//要素自身の高さの何％がビューポートに入ったらアニメーションを開始するか：値は1の場合100％を意味する。
-    });
-
-    sr.reveal('.animation-bottom', {
-      duration: 1000,
-      distance: '40px',
-      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      origin: 'bottom',
-      interval: 150,
-      viewFactor: 0.5//要素自身の高さの何％がビューポートに入ったらアニメーションを開始するか：値は1の場合100％を意味する。
-    });
-
-    sr.reveal('.animation-interval', {
-      duration: 1000,
-      distance: '40px',
-      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
-      interval: 100,
-      origin: 'bottom',
-      viewFactor: 0.5//要素自身の高さの何％がビューポートに入ったらアニメーションを開始するか：値は1の場合100％を意味する。
-    });
-
+  // smooth link
+  $('a[href^=#]').click(function() {
+    var speed = 800;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
   });
 
 });
