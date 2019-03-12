@@ -1,0 +1,13 @@
+// スクリーンの設定
+@mixin max-screen($breakpoint) {
+	// 引数に設定された画面幅以下のスタイルを指定するメディアクエリ
+	@media screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+//svg画像の縦横比
+@mixin svgSize($raito, $height){
+    width: $height * $raito;
+    height: $height;
+}

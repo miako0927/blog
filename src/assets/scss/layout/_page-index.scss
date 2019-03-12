@@ -1,0 +1,213 @@
+
+/* --------------------------------
+ * main background
+ * -------------------------------- */
+.about,
+.info {
+  background-color: $BASE-BG-COLOR;
+}
+.menu,
+.insta,
+.party,
+.corp-logo {
+  background-color: $WHITE-COLOR;
+}
+
+/* --------------------------------
+ * about / menu / info
+ * -------------------------------- */
+%indexSectionInner {
+  position: relative;//viewmorelinkに対して
+  @include max-screen($BREAK-POINT-SM) {
+    flex-direction: column;
+ }
+}
+.about .section-inner {
+  flex-direction: row-reverse;
+  align-items: center;
+  @extend %indexSectionInner;
+}
+.menu .section-inner {
+  align-items: center;
+  @extend %indexSectionInner;
+}
+.info .section-inner {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  @extend %indexSectionInner;
+}
+
+.box-title {
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 2.0rem;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: $PRIMARY-COLOR;
+  @include max-screen($BREAK-POINT-SM) {
+    width: 100%;
+    letter-spacing: 0.05em;
+  }
+}
+.box-visual {
+  width: 58%;
+  .info & {
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 68%;//absoluteの高さ
+    }
+    .box-iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.box-txt{
+  width: 42%;
+  padding: 0 4%;
+  font-size: 1.6rem;
+  line-height: 2.0;
+  @include max-screen($BREAK-POINT-SM) {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 15px;
+  }
+}
+.info .box-txt {
+  font-size: 1.2rem;
+  @include max-screen($BREAK-POINT-SM) {
+    font-size: 1.4rem;
+  }
+  dt {
+    color: lighten($BASE-COLOR, 16%);
+  }
+  dd {
+    padding-bottom: 10px;
+    &:last-child { padding-bottom: 0;}
+  }
+}
+.box-txt--center {
+  text-align: center;
+}
+.box-txt--left {
+  text-align: left;
+}
+
+.box-morelink {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  padding: 15px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: $PRIMARY-COLOR;
+  border-bottom: 1px solid $GRAY-BDR-COLOR;
+  transition: 0.5s;
+  &:hover {
+    transform: translateY(-10px);
+  }
+  .about & {
+    left: 0;
+  }
+  .menu & {
+    right: 0;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    position: static;
+    margin: 0 auto;
+    width: 140px;
+    text-align: center;
+  }
+}
+
+/* --------------------------------
+ * insta
+ * -------------------------------- */
+#instafeed {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: (100% / 3);
+    padding: 0 2% 4%;
+    @include max-screen($BREAK-POINT-SM) {
+      width: 50%;
+    }
+    a {
+      display: block;
+      width: 100%;
+      border:1px solid #fff;
+      overflow: hidden;
+      img{
+       transition: 0.5s;
+       &:hover {
+         transform: scale(1.1);
+         transform-origin: center center;
+         transition-duration: 0.5s;
+       }
+      }
+    }
+  }
+}
+// スクロールアニメーション
+.insta-item {
+  margin-top: 40px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0s;
+  &:nth-child(2){
+    transition-delay: 0.1s;
+  }
+  &:nth-child(3){
+    transition-delay: 0.2s;
+  }
+  &:nth-child(4){
+    transition-delay: 0.3s;
+  }
+  &:nth-child(5){
+    transition-delay: 0.4s;
+  }
+  &:nth-child(6){
+    transition-delay: 0.5s;
+  }
+}
+.effect {
+  margin-top: 0;
+  opacity: 1;
+  }
+
+/* --------------------------------
+ * recruit
+ * -------------------------------- */
+.recruit {
+  a:hover{
+    opacity: .7;
+  }
+}
+/* --------------------------------
+ * logo
+ * -------------------------------- */
+.box-corpLogo {
+  padding: 60px 0 30px;
+  a {
+    display: block;
+    width: 257px;
+    height: 50px;
+    margin: 0 auto;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    padding: 10px 0 40px;
+    a {
+      width: 40%;
+      height: auto;
+    }
+  }
+}

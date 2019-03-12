@@ -1,0 +1,180 @@
+
+
+/* --------------------------------
+ * body
+ * -------------------------------- */
+body {
+  background: $WHITE-BG-COLOR;
+  color: $BASE-COLOR;
+  font-family: 'Avenir', Verdana, YuGothic, '游ゴシック', Hiragino Sans, 'ヒラギノ角ゴシック', Hiragino Kaku Gothic ProN, 'ヒラギノ角ゴ ProN W3', Roboto, 'Droid Sans',  Meiryo, 'メイリオ', 'ＭＳ Ｐゴシック', serif;
+}
+
+/* --------------------------------
+ * modifier
+ * -------------------------------- */
+.--pc {
+  display: block!important;
+  @include max-screen($BREAK-POINT-SM) {
+    display: none!important;
+  }
+}
+.--sp {
+  display: none!important;
+  @include max-screen($BREAK-POINT-SM) {
+  display: block!important;
+  }
+}
+.--fixed {
+  border-top: 0;
+  position: fixed;
+  z-index: 8888;
+  top: 0;
+  left: 0;
+}
+
+/* --------------------------------
+ * layout - common
+ * -------------------------------- */
+//大枠・100%の部分
+header, nav, main, footer {
+  width: 100%;
+}
+main {
+  width: 100%;
+  padding-bottom: 80px;
+  @include max-screen($BREAK-POINT-SM) {
+    padding-bottom: 20px;
+  }
+}
+footer {
+  padding: 30px;
+}
+
+//section
+.section-wrapper {
+  width: 100%;
+}
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  @include max-screen($BREAK-POINT-SM) {
+    max-width: 100%;
+  }
+  nav & {
+    max-width: 960px;
+    @include max-screen($BREAK-POINT-TB) {
+      max-width: 760px;
+    }
+  }
+}
+
+//flex or block
+.--flex {
+  display: flex;
+  @include max-screen($BREAK-POINT-SM) {
+    flex-direction: column;
+  }
+}
+.--block {
+  display: block;
+}
+
+/* --------------------------------
+ * layout - top
+ * -------------------------------- */
+.about, .menu, .info {
+  padding: 80px;
+  @include max-screen($BREAK-POINT-TB) {
+    padding: 60px 30px 70px;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    padding: 60px 10px;
+  }
+}
+.insta {
+  padding: 80px 60px 20px;
+  @include max-screen($BREAK-POINT-TB) {
+    padding: 60px 30px 20px;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    padding: 60px 5px 35px;
+  }
+}
+.party {
+  padding: 80px 80px 30px;
+  @include max-screen($BREAK-POINT-TB) {
+    padding: 60px 30px 30px;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+  padding: 30px 10px 30px;
+  }
+}
+.recruit {
+  padding: 0 80px 30px;
+  @include max-screen($BREAK-POINT-TB) {
+    padding: 0 30px 30px;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+  padding: 0 10px 30px;
+  }
+}
+
+/* --------------------------------
+ * layout - secondory
+ * -------------------------------- */
+.s-main {
+  margin-top: -20px;
+}
+.afternoontea, .menulist, .concept{
+  padding: 0 80px 80px;
+  @include max-screen($BREAK-POINT-TB) {
+    padding: 0 30px 80px;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    padding: 0 10px 60px;
+  }
+}
+.gallery {
+  padding: 0 80px 80px;
+  @include max-screen($BREAK-POINT-TB) {
+    padding: 0 30px 80px;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    padding: 0 0 60px;
+
+  }
+}
+.s-box-title {
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-top: 2px solid $GRAY-BDR-COLOR;
+  border-bottom: 2px solid $GRAY-BDR-COLOR;
+  background-color: $WHITE-COLOR;
+  text-align: center;
+}
+.s-box-subtitle {
+  padding: 60px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  &:before, &:after {
+  	content: "";
+  	flex-grow: 1;
+  	height: 1px;
+  	background: $GRAY-BDR-COLOR;
+  	display: block;
+  }
+  &:before {
+  	margin-right: 10%;
+  }
+  &:after {
+  	margin-left: 10%;
+  }
+  @include max-screen($BREAK-POINT-SM) {
+    padding: 40px 0;
+    .gallery & {
+      padding: 40px 10px;
+    }
+  }
+}

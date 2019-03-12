@@ -1,0 +1,156 @@
+
+/* --------------------------------
+ * top nav
+ * -------------------------------- */
+%svgNav {
+  fill: $WHITE-COLOR;
+  vertical-align:bottom;
+  .current & {
+    opacity: 0.6;
+  }
+}
+.svg--home {
+  @extend %svgNav;
+  @include svgSize(4.33, 13px);
+}
+.svg--info {
+  @extend %svgNav;
+  width: 50px;
+  @include svgSize(3.33, 13px);
+}
+.svg--menu {
+  @extend %svgNav;
+  width: 66px;
+  @include svgSize(4.40, 13px);
+}
+.svg--about {
+  @extend %svgNav;
+  width: 72px;
+  @include svgSize(4.80, 13px);
+}
+.svg--party {
+  @extend %svgNav;
+  width: 123px;
+  @include svgSize(8.20, 13px);
+}
+.svg--recruit {
+  @extend %svgNav;
+  width: 90px;
+  @include svgSize(6.00, 13px);
+}
+
+
+/* --------------------------------
+ * second common
+ * -------------------------------- */
+%s-svgNav {
+ fill: $BASE-COLOR;
+ vertical-align:bottom;
+}
+.svg--logo02 {//2段
+   fill: lighten($BASE-COLOR, 10%);
+   vertical-align:bottom;
+  // @include svgSize(2.18, 35px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(2.18, 46px);
+      margin: 0 auto;
+  }
+}
+.svg--logo03 {//1段
+   fill: lighten($BASE-COLOR, 10%);
+   vertical-align:bottom;
+     margin: 0 auto;
+  @include svgSize(14.8, 35px);
+  @include max-screen($BREAK-POINT-SM) {
+    // @include svgSize(14.8, 20px);
+  }
+}
+.svg--fruitpicnic {
+   fill: lighten($BASE-COLOR, 10%);
+   vertical-align:bottom;
+  @include svgSize(9.52, 35px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(9.52, 18px);
+  }
+}
+
+
+/* --------------------------------
+ * menu page
+ * -------------------------------- */
+.svg--s-menu {
+  @extend %s-svgNav;
+  @include svgSize(4.38, 18px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(4.38, 14px);
+  }
+}
+.svg--afternoontea {
+  @extend %s-svgNav;
+  @include svgSize(11.4, 20px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(11.4, 18px);
+  }
+}
+.svg--price {
+  @extend %s-svgNav;
+  @include svgSize(3.95, 20px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(3.95, 18px);
+  }
+}
+.svg--cafe-menu {
+  @extend %s-svgNav;
+  @include svgSize(8.11, 18px);
+  @include max-screen($BREAK-POINT-TB) {
+    @include svgSize(8.11, 14px);
+  }
+}
+.svg--afternoontea-menu{
+  @extend %s-svgNav;
+  @include svgSize(5.30, 54px);
+  @include max-screen($BREAK-POINT-TB) {
+    @include svgSize(5.30, 42px);
+  }
+}
+.svg--takeout-menu {
+  @extend %s-svgNav;
+  @include svgSize(2.30, 54px);
+  @include max-screen($BREAK-POINT-TB) {
+    @include svgSize(2.30, 42px);
+  }
+}
+
+
+
+/* --------------------------------
+ * about page
+ * -------------------------------- */
+.svg--s-about {
+  @extend %s-svgNav;
+  @include svgSize(4.94, 18px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(4.94, 14px);
+  }
+}
+.svg--concept {
+  @extend %s-svgNav;
+  @include svgSize(6.70, 20px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(6.70, 18px);
+  }
+}
+.svg--welcome {
+  @extend %s-svgNav;
+  @include svgSize(22.0, 18px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(22.0, 14px);
+  }
+}
+.svg--gallery {
+  @extend %s-svgNav;
+  @include svgSize(5.9, 20px);
+  @include max-screen($BREAK-POINT-SM) {
+    @include svgSize(5.9, 18px);
+  }
+}
