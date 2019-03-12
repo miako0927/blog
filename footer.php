@@ -7,12 +7,17 @@
 	</div>
 	<!-- フッター -->
 	<div class="inner">
-		<dl class="address">
-			<dt>ホテル・技評リゾート石垣島</dt>
-			<dd>〒123-4567 沖縄県石垣市0123</dd>
-			<dd>TEL 0123(45)6789 / FAX 0123(45)6789</dd>
-		</dl>
-		<small>&copy; HOTEL GIHYO RESORT ISHIGAKI All Rights Reserved.</small>
+    <!-- フッターナビ -->
+    <nav class="fotterNavi">
+    <?php
+    	$args = array(
+    	    'menu' => 'global-navigation', //管理画面で作成したメニューの名前
+    	    'container' => false, //<ul>タグを囲んでいる<div>タグを削除
+    	);
+    	wp_nav_menu($args);
+    ?>
+    </nav>
+		<small>&copy; mizon-webdesign All Rights Reserved.</small>
 	</div>
 </footer>
 

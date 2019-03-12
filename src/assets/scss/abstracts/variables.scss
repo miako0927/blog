@@ -1,16 +1,26 @@
+//font-family
+$FONT-FAMILY: 'Avenir', Verdana, YuGothic, '游ゴシック', Hiragino Sans, 'ヒラギノ角ゴシック', Hiragino Kaku Gothic ProN, 'ヒラギノ角ゴ ProN W3', Roboto, 'Droid Sans',  Meiryo, 'メイリオ', 'ＭＳ Ｐゴシック', serif;
 
 // break point
 $BREAK-POINT-TB: 1023px;
 $BREAK-POINT-SM: 767px;
 
+// cntents widht
+$CONTENT-WIDTH: 960px;
+$MAIN-CONTENT-WIDTH: 680px;
+$SUB-CONTENT-WIDTH: 290px;
+
 // color
-$BASE-COLOR: #726D6D;
-$PRIMARY-COLOR: #6F5362;
-$WHITE-COLOR: #fff;
+$BASE-COLOR: #444444;
+$BASE2-COLOR: #333333;
+$BASE3-COLOR: #616161;
+$PRIMARY-COLOR: #78CBF3;
+$GRAY-COLOR: #9E9E9E;
+$WHITE-COLOR: #ffffff;
 // bg-color
-$BASE-BG-COLOR: #EAE5E6;
-$VIVID-BG-COLOR: #A28896;
-$PALE-BG-COLOR: #DED3D7;
-$WHITE-BG-COLOR: #fff;
+$BASE-BG-COLOR: #EEEEEE;
+$VIVID-BG-COLOR: #78CBF3;
+$PALE-BG-COLOR: #FAFAFA;
+$WHITE-BG-COLOR: #ffffff;
 // border-color
 $GRAY-BDR-COLOR: #707070;
