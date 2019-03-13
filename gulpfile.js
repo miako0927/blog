@@ -99,23 +99,23 @@ gulp.task("js", function() {
 });
 
 //browser sync
-gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "./dist/"   //サーバとなるrootディレクトリ
-        }
-    });
-    gulp.watch(dist.html, gulp.task('reload'));
-    gulp.watch(dist.css, gulp.task('reload'));
-    gulp.watch(dist.js, gulp.task('reload'));
-    gulp.watch(dist.images, gulp.task('reload'));
-});
-gulp.task('reload', function() {
-    browserSync.reload();
-});
+// gulp.task('browser-sync', function() {
+//     browserSync({
+//         server: {
+//             baseDir: "./dist/"   //サーバとなるrootディレクトリ
+//         }
+//     });
+//     gulp.watch(dist.html, gulp.task('reload'));
+//     gulp.watch(dist.css, gulp.task('reload'));
+//     gulp.watch(dist.js, gulp.task('reload'));
+//     gulp.watch(dist.images, gulp.task('reload'));
+// });
+// gulp.task('reload', function() {
+//     browserSync.reload();
+// });
 
 //watch
-gulp.task('watch', gulp.series(
+gulp.task('dev', gulp.series(
   gulp.parallel('sass', 'imagemin', 'js'),
   function(){
     gulp.watch([src.scss, src.scssmudule], gulp.task('sass'));
@@ -124,7 +124,7 @@ gulp.task('watch', gulp.series(
   }));
 
 //dev
-gulp.task('dev', gulp.parallel('browser-sync', 'watch'));
+// gulp.task('dev', gulp.parallel('browser-sync', 'watch'));
 
 
 // svg-compression

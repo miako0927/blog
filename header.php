@@ -18,7 +18,8 @@
 	<!-- js -->
 	<?php
 		wp_enqueue_script('jquery');// jQuery読み込み
-		wp_enqueue_script('hotel-common.js', get_template_directory_uri() . '/js/common.js');// js外部ファイル読み込み
+    wp_enqueue_script('svg4everybody.js', get_template_directory_uri() . '/js/plugin/svg4everybody.min.js');
+		wp_enqueue_script('common.js', get_template_directory_uri() . '/js/base/common.min.js');
 	?>
 
   <!--  favicon homeicon -->
@@ -49,26 +50,33 @@
 <body <?php body_class(); ?>><!-- bodyタグのclass属性を表示 -->
 
 <!-- グローバルヘッダー -->
-<header class="globalHeader">
-	<div class="inner">
-		<h1>
-			<a href="<?php echo home_url(); ?>"><!-- トップページのURLを返す -->
-				web design supplement
-			</a>
-		</h1>
-		<p class="description"><?php bloginfo('description'); ?></p>
-	</div>
+<header>
+  <div class="header-inner">
 
-  <!-- グローバルナビ -->
-  <nav class="globalNavi">
-  <?php
-  	$args = array(
-  	    'menu' => 'global-navigation', //管理画面で作成したメニューの名前
-  	    'container' => false, //<ul>タグを囲んでいる<div>タグを削除
-  	);
-  	wp_nav_menu($args);
-  ?>
-  </nav>
+  	<div class="header-title">
+  		<h1 class="header-heading">
+  			<a href="<?php echo home_url(); ?>">web design supplement</a>
+  		</h1>
+  		<p class="header-description"><?php bloginfo('description'); ?></p>
+  	</div>
+
+
+    <nav class="header-nav">
+      <?php
+      	$args = array(
+      	    'menu' => 'header-navigation', //管理画面で作成したメニューの名前
+      	    'container' => false, //<ul>タグを囲んでいる<div>タグを削除
+      	);
+      	wp_nav_menu($args);
+      ?>
+      <div class="twitter-icon">
+        <svg class="svg--twitter-icon-blue" role="img">
+          <title>HOME</title>
+          <use xlink:href="assets/images/sprite.svg#svg--twitter-icon-blue"></use>
+        </svg>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <!-- ヒーローイメージ（トップのみ表示） -->

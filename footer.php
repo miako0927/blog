@@ -11,7 +11,7 @@
     <nav class="fotterNavi">
     <?php
     	$args = array(
-    	    'menu' => 'global-navigation', //管理画面で作成したメニューの名前
+    	    'menu' => 'footer-navigation', //管理画面で作成したメニューの名前
     	    'container' => false, //<ul>タグを囲んでいる<div>タグを削除
     	);
     	wp_nav_menu($args);

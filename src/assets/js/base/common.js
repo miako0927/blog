@@ -50,4 +50,7 @@ $(function() {
     return false;
   });
 
+  //svg sprite
+  svg4everybody();
+
 });
