@@ -1,0 +1,55 @@
+
+/* --------------------------------
+ * 新着記事一覧
+ * -------------------------------- */
+.mainSection-heading--blue{
+  background: $VIVID-BG-COLOR;
+  padding: 15px;
+  color: $WHITE-COLOR;
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+
+article {
+  display: flex;
+  padding-bottom: 15px;
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+  //サムネイル画像
+  .visual {
+    a {
+      display: block;
+      width: 150px;
+      height: 150px;
+    }
+  }
+  //テキスト
+  .text {
+    padding: 10px 0 10px 15px;
+    .entryInfo {
+      display: flex;
+      align-items: center;
+      padding-bottom: 15px;
+      .categories ul li a {
+        font-size: 1.2rem;
+        color: $PRIMARY-COLOR;
+        margin-right: 10px;
+      }
+      time {
+        font-size: 1.0rem;
+        color: $GRAY-COLOR;
+      }
+    }
+    .article-title a {
+      font-size: 1.6rem;
+      color: $BASE-COLOR;
+    }
+  }
+}
+
+.wp-pagenavi {
+  padding: 15px 0;
+}

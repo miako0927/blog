@@ -1,14 +1,14 @@
-<footer class="globalFooter">
-	<!-- トップへ戻るボタン -->
-	<div class="pageTop">
-		<p><a href="javascript:void(0);" id="js-pagetop">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/common/pagetop01.png" height="41" width="41" alt="">
-		</a></p>
-	</div>
+
+<!-- トップへ戻るボタン -->
+<div id="page_top" class="clearfix">
+  <a href="javascript:void(0);" id="js-pagetop"></a>
+</div>
+
+<footer>
 	<!-- フッター -->
-	<div class="inner">
+	<div class="footer-inner">
     <!-- フッターナビ -->
-    <nav class="fotterNavi">
+    <nav class="footer-nav">
     <?php
     	$args = array(
     	    'menu' => 'footer-navigation', //管理画面で作成したメニューの名前
@@ -17,7 +17,7 @@
     	wp_nav_menu($args);
     ?>
     </nav>
-		<small>&copy; mizon-webdesign All Rights Reserved.</small>
+		<p class="copyright">&copy; mizon-webdesign All Rights Reserved.</p>
 	</div>
 </footer>
 
