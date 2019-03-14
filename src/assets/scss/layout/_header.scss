@@ -50,3 +50,19 @@ header {
   background-position: center center;
   background-size: cover;
 }
+
+//breadcrumbs
+.breadcrumbs {
+  display: flex;
+  color: $GRAY-COLOR;
+  font-size: 1.2rem;
+  span {
+    margin: 0 5px;
+    &:first-child { margin-left: 0;}
+  }
+  a {
+    color: $GRAY-COLOR;
+    text-decoration: underline;
+  }
+
+}

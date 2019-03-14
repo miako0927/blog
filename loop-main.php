@@ -19,7 +19,7 @@
 				    <div class="categories">
 					    <?php the_category(); ?>
 				    </div>
-				    <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date('Y.m.d') ?></time>
+				    <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date('Y.m.d (D)') ?></time>
 				</div>
 				<h1 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			</div>

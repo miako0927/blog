@@ -19,7 +19,9 @@
 
     <!-- サイドバー -->
   	<aside>
-  		<?php get_sidebar(); ?>
+      <?php get_sidebar('profile'); ?>
+      <?php get_sidebar('categories'); ?>
+      <?php get_sidebar('archives'); ?>
   	</aside>
 
   </div>

@@ -187,13 +187,13 @@ jQuery(function($) {
         return false;
       }
       // タグ
-      if ( $('#tagsdiv-post_tag .tagchecklist span').length < 1 ) {
-        alert('タグを選択してください');
-        $('.spinner').css('visibility', 'hidden');
-        $('#publish').removeClass('button-primary-disabled');
-        $('#new-tag-post_tag').focus();
-        return false;
-      }
+      // if ( $('#tagsdiv-post_tag .tagchecklist span').length < 1 ) {
+      //   alert('タグを選択してください');
+      //   $('.spinner').css('visibility', 'hidden');
+      //   $('#publish').removeClass('button-primary-disabled');
+      //   $('#new-tag-post_tag').focus();
+      //   return false;
+      // }
       // アイキャッチ
       if ( $('#set-post-thumbnail img').length < 1 ) {
         alert('アイキャッチ画像を設定してください');
