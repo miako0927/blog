@@ -69,19 +69,13 @@
       	);
       	wp_nav_menu($args);
       ?>
-      <div class="twitter-icon">
-        <svg class="svg--twitter-icon-blue" role="img">
-          <title>HOME</title>
-          <use xlink:href="assets/images/sprite.svg#svg--twitter-icon-blue"></use>
-        </svg>
-      </div>
     </nav>
   </div>
 </header>
 
 <!-- ヒーローイメージ（トップのみ表示） -->
 <?php if( is_home() ): ?>
-	<div class="homeVisual"></div>
+	<div class="home-mv"></div>
 <?php endif; ?>
 
 
