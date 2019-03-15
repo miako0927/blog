@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Overpass:300,400,600,700");
 
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+
 /* base */
 
 *,
@@ -260,7 +264,7 @@ select::-ms-expand {
 body {
 	background-color: #FAFAFA;
 	color: #444444;
-	font-family: Overpass, Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", "Avenir", Verdana, YuGothic, "游ゴシック", Roboto, "Droid Sans", Meiryo, "メイリオ", "ＭＳ Ｐゴシック", serif;
+	font-family: Lato, Overpass, Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", "Avenir", Verdana, YuGothic, "游ゴシック", Roboto, "Droid Sans", Meiryo, "メイリオ", "ＭＳ Ｐゴシック", serif;
 	font-size: 1.2rem;
 }
 
@@ -679,6 +683,95 @@ body.fadeout::after {
 	height: 20px;
 }
 
+.wpcf7-form p .must,
+.wpcf7-form p .free {
+	padding: 3px 10px;
+	margin-right: 5px;
+	font-size: 0.6rem;
+	border-radius: 10px;
+}
+
+.wpcf7-form p .wpcf7-form-control-wrap input,
+.wpcf7-form p .wpcf7-form-control-wrap textarea {
+	width: 100%;
+	padding: 5px 10px;
+	background: #ffffff;
+	border: solid 1px #9E9E9E;
+	font-size: 1.2rem;
+}
+
+.wpcf7-form p .must {
+	color: #ffffff;
+	background-color: #78CBF3;
+}
+
+.wpcf7-form p .free {
+	color: #ffffff;
+	background-color: #9E9E9E;
+}
+
+.wpcf7-form p .wpcf7-form-control-wrap {
+	display: block;
+	padding: 10px 0 30px;
+}
+
+.wpcf7-form p .wpcf7-form-control-wrap input {
+	width: 60%;
+}
+
+.wpcf7-form p .wpcf7-form-control-wrap textarea {
+	width: 100%;
+	height: 100px; /* お好みの高さに */
+	resize: vertical;
+}
+
+.form-group {
+	margin: 10px 0;
+	padding: 20px;
+	width: 100%;
+	border: 1px solid #E0E0E0;
+	background: #F5F5F5;
+}
+
+.form-part {
+	margin: 0;
+	padding: 10px;
+}
+
+.label {
+	display: block;
+	font-size: 0.7rem;
+	color: #333;
+	padding: 0 10px 5px 0;
+}
+
+.inputfield {
+	width: 100%;
+	padding: 5px 10px;
+	background: #fff;
+	border: solid 1px #ccc;
+	font-size: 0.6rem;
+}
+
+/* foucus */
+
+.inputfield:focus {
+	border: solid 1px #29B6F6;
+}
+
+/* disabled */
+
+.inputfield:disabled {
+	background: #fafafa;
+}
+
+/* textarea resize */
+
+textarea {
+	height: 100px; /* お好みの高さに */
+	resize: vertical;
+}
+
 #page_top {
 	max-width: 960px;
 	margin: 0 auto;
@@ -739,7 +832,8 @@ footer {
 .footer-nav ul li a {
 	display: block;
 	padding-right: 15px;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
+	font-weight: 300;
 	color: #ffffff;
 }
 
@@ -797,7 +891,8 @@ header {
 .header-nav ul li a {
 	display: block;
 	padding-right: 15px;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	font-weight: 300;
 	color: #78CBF3;
 }
 
@@ -835,13 +930,23 @@ header {
  * 記事一覧（loop-main）
  * -------------------------------- */
 
-.mainSection-heading--blue {
-	background: #78CBF3;
+.mainSection-heading--blue,
+.mainSection-heading--gray {
 	padding: 15px;
-	color: #ffffff;
 	font-size: 1.4rem;
+	font-weight: 300;
 	text-align: center;
 	letter-spacing: 0.2rem;
+}
+
+.mainSection-heading--blue {
+	color: #ffffff;
+	background: #78CBF3;
+}
+
+.mainSection-heading--gray {
+	color: #444444;
+	background: #EEEEEE;
 }
 
 article {
@@ -897,12 +1002,14 @@ article .text .article-title a {
 }
 
 /* --------------------------------
- * 検索結果なし、記事なし
+ * 検索結果なし、記事なし、404
  * -------------------------------- */
 
 .no-result,
-.no-article {
+.no-article,
+.404 {
 	font-size: 1.2rem;
+	line-height: 1.8;
 	color: #444444;
 }
 
@@ -918,7 +1025,7 @@ article .text .article-title a {
 .sidebar-wrapper .sidebar-title {
 	padding: 10px;
 	font-size: 1.4rem;
-	font-weight: bold;
+	font-weight: 300;
 	color: #444444;
 	text-align: center;
 	background-color: #EEEEEE;

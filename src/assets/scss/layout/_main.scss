@@ -2,14 +2,25 @@
 /* --------------------------------
  * 記事一覧（loop-main）
  * -------------------------------- */
-.mainSection-heading--blue{
-  background: $VIVID-BG-COLOR;
+
+%mainSection-heading {
   padding: 15px;
-  color: $WHITE-COLOR;
   font-size: 1.4rem;
+  font-weight: 300;
   text-align: center;
   letter-spacing: 0.2rem;
 }
+.mainSection-heading--blue{
+  @extend %mainSection-heading;
+  color: $WHITE-COLOR;
+  background: $VIVID-BG-COLOR;
+}
+.mainSection-heading--gray{
+  @extend %mainSection-heading;
+  color: $BASE-COLOR;
+  background: $BASE-BG-COLOR;
+}
+
 article {
   display: flex;
   padding-bottom: 15px;
@@ -54,9 +65,10 @@ article {
 }
 
 /* --------------------------------
- * 検索結果なし、記事なし
+ * 検索結果なし、記事なし、404
  * -------------------------------- */
- .no-result, .no-article {
+ .no-result, .no-article, .404 {
    font-size: 1.2rem;
+   line-height: 1.8;
    color: $BASE-COLOR;
  }

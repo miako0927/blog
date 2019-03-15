@@ -1,0 +1,88 @@
+
+%must-or-free {
+  padding: 3px 10px;
+  margin-right: 5px;
+  font-size: 0.6rem;
+  border-radius: 10px;
+}
+
+%inputfield {
+  width: 100%;
+	padding: 5px 10px;
+	background: $WHITE-BG-COLOR;
+	border: solid 1px $GRAY-BDR-COLOR;
+  font-size: 1.2rem;
+
+}
+
+//Header
+.wpcf7-form {
+  p {
+    .must {
+      @extend %must-or-free ;
+      color: $WHITE-COLOR;
+      background-color: $VIVID-BG-COLOR;
+    }
+    .free {
+      @extend %must-or-free ;
+      color: $WHITE-COLOR;
+      background-color: $GRAY-BG-COLOR;
+    }
+    .wpcf7-form-control-wrap {
+      display: block;
+      padding: 10px 0 30px;
+      input {
+        width: 60%;
+        @extend %inputfield;
+      }
+      textarea {
+        width: 100%;
+        height: 100px; /* お好みの高さに */
+        resize: vertical;
+        @extend %inputfield;
+      }
+
+    }
+
+  }
+}
+
+
+
+.form-group{
+	margin: 10px 0;
+	padding: 20px;
+	width: 100%;
+	border: 1px solid #E0E0E0;
+	background: #F5F5F5;
+}
+.form-part {
+	margin: 0;
+	padding: 10px;
+}
+.label {
+  display: block;
+	font-size: 0.7rem;
+  color: #333;
+  padding: 0 10px 5px 0;
+}
+.inputfield {
+  width: 100%;
+	padding: 5px 10px;
+	background: #fff;
+	border: solid 1px #ccc;
+  	font-size: 0.6rem;
+}
+/* foucus */
+.inputfield:focus {
+	border: solid 1px #29B6F6;
+}
+/* disabled */
+.inputfield:disabled {
+	background: #fafafa;
+}
+/* textarea resize */
+textarea {
+  height: 100px; /* お好みの高さに */
+  resize: vertical;
+}
