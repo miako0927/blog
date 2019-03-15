@@ -1,6 +1,6 @@
 <section class="sidebar-wrapper">
 	<h4 class="sidebar-title">月別アーカイブ</h4>
-	<ul class="archives sidebar-inner">
+	<ul class="sidebar-archives sidebar-inner">
 		<?php
 			$args = array(
 				'type' => 'monthly', //月別を指定

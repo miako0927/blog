@@ -157,3 +157,53 @@ color:#000;
 }
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssreset { display: none; }
+
+
+/* form reset */
+legend {
+  width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+}
+fieldset,
+button,
+option,
+select,
+textarea,
+input[type="button"],
+input[type="submit"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="select"],
+input[type="option"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    outline: 0;
+    margin: 0;
+    background: #fff;
+}
+/* デフォルトのradio、checkboxは非表示 */
+input[type=radio],
+input[type=checkbox] {
+  display: none;
+}
+/* for firefox */
+select {
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+/* for ie10 ie11 ie系のプルダウンの矢印を消す ie9は非対応 */
+select::-ms-expand {
+    display: none;
+}

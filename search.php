@@ -7,14 +7,7 @@
     <!-- メイン -->
   	<main>
   		<section class="mainSection-wrapper">
-
-        <!-- 日付別ページの条件分岐 -->
-        <?php if( is_month() ): ?>
-          <h1 class="mainSection-heading--blue"><?php the_time('Y年m月'); ?></h1>
-        <?php else: ?>
-          <h1 class="mainSection-heading--blue"><?php wp_title(''); ?></h1>
-        <?php endif; ?>
-
+  			<h1 class="mainSection-heading--blue">「<?php the_search_query(); ?>」の検索結果</h1>
   			<div class="mainSection-inner">
   		    <?php get_template_part('loop', 'main'); ?>
   			</div>

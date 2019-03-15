@@ -22,6 +22,7 @@
       <?php get_sidebar('profile'); ?>
       <?php get_sidebar('categories'); ?>
       <?php get_sidebar('archives'); ?>
+      <?php get_sidebar('searchform'); ?>
   	</aside>
 
   </div>

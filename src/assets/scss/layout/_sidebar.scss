@@ -18,9 +18,9 @@
   }
 }
 /* --------------------------------
- * profile
+ * sidebar profile
  * -------------------------------- */
- .profile {
+ .sidebar-profile {
    .profile-summary {
      display: flex;
      align-items: center;
@@ -58,32 +58,32 @@
         flex: 0 0 30%;
         a {
           width: 100%;
-          padding: 5px;
+          height: 35px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 20px auto;
           background-color: $BASE-BG-COLOR;
           border-radius: 3px;
           text-align: center;
-          .buttonImage {
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            display:inline-block;
-            width:20px;
-            height:20px;
-          }
-          .twitter-icon { background-image: url('../images/twitter-icon.png'); }
-          .rss-icon { background-image: url('../images/rss-icon.png'); }
-          .mail-icon { background-image: url('../images/mail-icon.png'); }
         }
-
+        .twitter-icon {
+          background-image: url("../images/twitter-icon.png");
+        }
+        .rss-icon {
+          background-image: url("../images/rss-icon.png");
+        }
+        .mail-icon {
+          background-image: url("../images/mail-icon.png");
+        }
       }
    }
 
  }
 
 /* --------------------------------
- * categories .archives
+ * sidebar categories sidebar archives
  * -------------------------------- */
-.categories, .archives {
+.sidebar-categories, .sidebar-archives {
   li {
       padding-bottom: 10px;
       font-size: 1.2rem;
@@ -94,6 +94,35 @@
       text-decoration: underline;
       display: inline-block;
     }
+  }
+}
 
+/* --------------------------------
+ * sidebar serachform
+ * -------------------------------- */
+.sidebar-search {
+  .search-form input {
+    height: 30px;
+    vertical-align: top;
+  }
+  .search-form input[type="text"] {
+    width: 85%;
+    padding: 10px;
+  	background: $WHITE-BG-COLOR;
+  	border: solid 1px $GRAY-BDR-COLOR;
+    font-size: 1.2rem;
+    color: $BASE3-COLOR;
+    &:focus {
+    	border: solid 1px #29B6F6;
+    }
+  }
+  .search-form input[type="submit"] {
+    width: 15%;
+    background: url("../images/search-icon.png") no-repeat center center;
+    background-size: 16px 16px;
+    background-color: $GRAY-BDR-COLOR;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

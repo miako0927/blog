@@ -57,7 +57,7 @@
   		<h1 class="header-heading">
   			<a href="<?php echo home_url(); ?>">web design supplement</a>
   		</h1>
-  		<p class="header-description"><?php bloginfo('description'); ?></p>
+  		<!-- <p class="header-description"><?php bloginfo('description'); ?></p> -->
   	</div>
 
 

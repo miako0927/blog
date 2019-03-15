@@ -1,6 +1,6 @@
 <section class="sidebar-wrapper">
 	<h4 class="sidebar-title">カテゴリ</h4>
-  <ul class="categories sidebar-inner">
+  <ul class="sidebar-categories sidebar-inner">
     <?php
 			$args = array(
 				'title_li' => '', //liの見出しを削除（省略時はカテゴリー）
