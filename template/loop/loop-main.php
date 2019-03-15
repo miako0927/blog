@@ -30,9 +30,9 @@
 <?php else : ?><!-- 記事がなかった場合 -->
 
 	<?php if( is_search() ) : ?><!-- 検索ページの場合 -->
-		<p>検索結果はありませんでした</p>
+		<p class="no-result">検索結果はありませんでした</p>
 	<?php else : ?><!-- 検索ページ以外の場合 -->
-		<p>記事はありません。</p>
+		<p class="no-article">記事はありません。</p>
 	<?php endif; ?>
 
 <?php endif; ?>

@@ -1,5 +1,5 @@
 <section class="sidebar-wrapper">
-	<h4 class="sidebar-title">カテゴリ</h4>
+	<h4 class="sidebar-title">categories</h4>
   <ul class="sidebar-categories sidebar-inner">
     <?php
 			$args = array(

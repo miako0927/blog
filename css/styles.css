@@ -260,7 +260,8 @@ select::-ms-expand {
 body {
 	background-color: #FAFAFA;
 	color: #444444;
-	font-family: Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", "Avenir", Verdana, YuGothic, "游ゴシック", Roboto, "Droid Sans", Meiryo, "メイリオ", "ＭＳ Ｐゴシック", serif;
+	font-family: Overpass, Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", "Avenir", Verdana, YuGothic, "游ゴシック", Roboto, "Droid Sans", Meiryo, "メイリオ", "ＭＳ Ｐゴシック", serif;
+	font-size: 1.2rem;
 }
 
 /* --------------------------------
@@ -304,6 +305,7 @@ footer {
 
 .global-wrapper {
 	width: 100%;
+	padding-bottom: 50px;
 }
 
 .global-inner {
@@ -677,73 +679,9 @@ body.fadeout::after {
 	height: 20px;
 }
 
-/* --------------------------------
- * 新着記事一覧
- * -------------------------------- */
-
-.mainSection-heading--blue {
-	background: #78CBF3;
-	padding: 15px;
-	color: #ffffff;
-	font-size: 1.4rem;
-	text-align: center;
-	letter-spacing: 0.2rem;
-}
-
-article {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	padding-bottom: 15px;
-}
-
-article:last-of-type {
-	padding-bottom: 0;
-}
-
-article .visual a {
-	display: block;
-	width: 150px;
-	height: 150px;
-}
-
-article .text {
-	padding: 10px 0 10px 15px;
-}
-
-article .text .entryInfo {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	padding-bottom: 15px;
-}
-
-article .text .entryInfo .categories ul li a {
-	font-size: 1.2rem;
-	color: #78CBF3;
-	margin-right: 10px;
-	text-decoration: none !important;
-}
-
-article .text .entryInfo time {
-	font-size: 1.0rem;
-	color: #9E9E9E;
-}
-
-article .text .article-title a {
-	font-size: 1.6rem;
-	color: #444444;
-}
-
-.wp-pagenavi {
-	padding: 15px 0;
-}
-
 #page_top {
 	max-width: 960px;
+	margin: 0 auto;
 }
 
 #page_top a {
@@ -894,25 +832,104 @@ header {
 }
 
 /* --------------------------------
+ * 記事一覧（loop-main）
+ * -------------------------------- */
+
+.mainSection-heading--blue {
+	background: #78CBF3;
+	padding: 15px;
+	color: #ffffff;
+	font-size: 1.4rem;
+	text-align: center;
+	letter-spacing: 0.2rem;
+}
+
+article {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-bottom: 15px;
+}
+
+article:last-of-type {
+	padding-bottom: 0;
+}
+
+article .visual a {
+	display: block;
+	width: 150px;
+	height: 150px;
+}
+
+article .text {
+	padding: 10px 0 10px 15px;
+}
+
+article .text .entryInfo {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-bottom: 15px;
+}
+
+article .text .entryInfo .categories ul li a {
+	font-size: 1.2rem;
+	color: #78CBF3;
+	margin-right: 10px;
+	text-decoration: none !important;
+}
+
+article .text .entryInfo time {
+	font-size: 1.0rem;
+	color: #9E9E9E;
+}
+
+article .text .article-title a {
+	font-size: 1.6rem;
+	color: #444444;
+}
+
+.wp-pagenavi {
+	padding: 15px 0;
+}
+
+/* --------------------------------
+ * 検索結果なし、記事なし
+ * -------------------------------- */
+
+.no-result,
+.no-article {
+	font-size: 1.2rem;
+	color: #444444;
+}
+
+/* --------------------------------
  * sidebar common
  * -------------------------------- */
 
 .sidebar-wrapper {
 	background-color: #ffffff;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 
 .sidebar-wrapper .sidebar-title {
 	padding: 10px;
-	font-size: 1.2rem;
-	color: #78CBF3;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #444444;
 	text-align: center;
-	border-top: 1px solid #78CBF3;
-	border-bottom: 1px solid #78CBF3;
+	background-color: #EEEEEE;
 }
 
 .sidebar-wrapper .sidebar-inner {
 	padding: 15px;
+}
+
+.sidebar-wrapper .sidebar-inner-widthmax {
+	padding: 15px 0;
 }
 
 /* --------------------------------
@@ -1053,6 +1070,38 @@ header {
 
 .sidebar-search .search-form input[type="submit"]:hover {
 	cursor: pointer;
+}
+
+/* --------------------------------
+ * sidebar twitter
+ * -------------------------------- */
+
+.timeline-InformationCircle-widgetParent {
+	display: none !important;
+}
+
+/* --------------------------------
+ * sidebar recently
+ * -------------------------------- */
+
+.sidebar-recently ul li {
+	padding-bottom: 15px;
+}
+
+.sidebar-recently ul li:last-child {
+	padding-bottom: 0;
+}
+
+.sidebar-recently ul li a h5 {
+	font-size: 1.2rem;
+	color: #616161;
+	text-decoration: underline;
+}
+
+.sidebar-recently ul li a time {
+	float: right;
+	font-size: 1.0rem;
+	color: #9E9E9E;
 }
 
 @media screen and (max-width: 1023px) {

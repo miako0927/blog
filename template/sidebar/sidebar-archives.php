@@ -1,5 +1,5 @@
 <section class="sidebar-wrapper">
-	<h4 class="sidebar-title">月別アーカイブ</h4>
+	<h4 class="sidebar-title">arcives</h4>
 	<ul class="sidebar-archives sidebar-inner">
 		<?php
 			$args = array(

@@ -7,6 +7,7 @@ body {
   background-color: $PALE-BG-COLOR;
   color: $BASE-COLOR;
   font-family: $FONT-FAMILY;
+  font-size: 1.2rem;
 }
 
 /* --------------------------------
@@ -51,6 +52,7 @@ header, footer {
 }
 .global-wrapper {
   width: 100%;
+  padding-bottom: 50px;
 }
 .global-inner {
   width: $CONTENT-WIDTH;

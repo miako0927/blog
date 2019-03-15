@@ -4,82 +4,84 @@
  * -------------------------------- */
 .sidebar-wrapper {
   background-color: $WHITE-BG-COLOR;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   .sidebar-title {
     padding: 10px;
-    font-size: 1.2rem;
-    color: $PRIMARY-COLOR;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $BASE-COLOR;
     text-align: center;
-    border-top: 1px solid $PRIMARY-BDR-COLOR;
-    border-bottom: 1px solid $PRIMARY-BDR-COLOR;
+    background-color: $BASE-BG-COLOR;
   }
   .sidebar-inner {
     padding: 15px;
+  }
+  .sidebar-inner-widthmax {
+    padding: 15px 0;
   }
 }
 /* --------------------------------
  * sidebar profile
  * -------------------------------- */
- .sidebar-profile {
-   .profile-summary {
-     display: flex;
-     align-items: center;
-     padding-bottom: 15px;
-     .profile-image {
-       flex: 0 0 100px;
-     }
-     .profile-name {
-       flex: 1 1 0;
-       font-size: 1.8rem;
-       color: $BASE-COLOR;
-       text-align: center;
-     }
+.sidebar-profile {
+  .profile-summary {
+   display: flex;
+   align-items: center;
+   padding-bottom: 15px;
+   .profile-image {
+     flex: 0 0 100px;
    }
-   .profile-disc {
-     font-size: 1.2rem;
-     color: $GRAY-COLOR;
-     padding-bottom: 15px;
-   }
-   .profile-morebtn {
-     width: 100%;
-     margin-bottom: 15px;
-     padding: 5px;
-     border: 1px solid $PRIMARY-BDR-COLOR;
-     border-radius: 3px;
-     font-size: 1.2rem;
-     color: $PRIMARY-COLOR;
+   .profile-name {
+     flex: 1 1 0;
+     font-size: 1.8rem;
+     color: $BASE-COLOR;
      text-align: center;
-
    }
-   .profile-sns {
-      display: flex;
-      justify-content: space-between;
-      li {
-        flex: 0 0 30%;
-        a {
-          width: 100%;
-          height: 35px;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: 20px auto;
-          background-color: $BASE-BG-COLOR;
-          border-radius: 3px;
-          text-align: center;
-        }
-        .twitter-icon {
-          background-image: url("../images/twitter-icon.png");
-        }
-        .rss-icon {
-          background-image: url("../images/rss-icon.png");
-        }
-        .mail-icon {
-          background-image: url("../images/mail-icon.png");
-        }
-      }
-   }
+  }
+ .profile-disc {
+   font-size: 1.2rem;
+   color: $GRAY-COLOR;
+   padding-bottom: 15px;
+ }
+ .profile-morebtn {
+   width: 100%;
+   margin-bottom: 15px;
+   padding: 5px;
+   border: 1px solid $PRIMARY-BDR-COLOR;
+   border-radius: 3px;
+   font-size: 1.2rem;
+   color: $PRIMARY-COLOR;
+   text-align: center;
 
  }
+ .profile-sns {
+    display: flex;
+    justify-content: space-between;
+    li {
+      flex: 0 0 30%;
+      a {
+        width: 100%;
+        height: 35px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20px auto;
+        background-color: $BASE-BG-COLOR;
+        border-radius: 3px;
+        text-align: center;
+      }
+      .twitter-icon {
+        background-image: url("../images/twitter-icon.png");
+      }
+      .rss-icon {
+        background-image: url("../images/rss-icon.png");
+      }
+      .mail-icon {
+        background-image: url("../images/mail-icon.png");
+      }
+    }
+ }
 
+}
 /* --------------------------------
  * sidebar categories sidebar archives
  * -------------------------------- */
@@ -96,7 +98,6 @@
     }
   }
 }
-
 /* --------------------------------
  * sidebar serachform
  * -------------------------------- */
@@ -123,6 +124,37 @@
     background-color: $GRAY-BDR-COLOR;
     &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+
+/* --------------------------------
+ * sidebar twitter
+ * -------------------------------- */
+.timeline-InformationCircle-widgetParent {
+  display: none!important;
+}
+
+/* --------------------------------
+ * sidebar recently
+ * -------------------------------- */
+.sidebar-recently {
+  ul li {
+    padding-bottom: 15px;
+    &:last-child { padding-bottom: 0;}
+    a {
+      h5 {
+        font-size: 1.2rem;
+        color: $BASE3-COLOR;
+        text-decoration: underline;
+      }
+      time {
+        float: right;
+        font-size: 1.0rem;
+        color: $GRAY-COLOR;
+      }
+
     }
   }
 }

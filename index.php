@@ -16,7 +16,7 @@
         <?php endif; ?>
 
   			<div class="mainSection-inner">
-  		    <?php get_template_part('loop', 'main'); ?>
+          <?php get_template_part('template/loop/loop-main'); ?>
   			</div>
   		</section>
 
@@ -26,10 +26,7 @@
 
     <!-- サイドバー -->
   	<aside>
-      <?php get_sidebar('profile'); ?>
-      <?php get_sidebar('categories'); ?>
-      <?php get_sidebar('archives'); ?>
-      <?php get_sidebar('searchform'); ?>
+      <?php get_sidebar(); ?>
   	</aside>
 
   </div>

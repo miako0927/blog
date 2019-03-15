@@ -1,6 +1,6 @@
 
 /* --------------------------------
- * 新着記事一覧
+ * 記事一覧（loop-main）
  * -------------------------------- */
 .mainSection-heading--blue{
   background: $VIVID-BG-COLOR;
@@ -10,8 +10,6 @@
   text-align: center;
   letter-spacing: 0.2rem;
 }
-
-
 article {
   display: flex;
   padding-bottom: 15px;
@@ -54,3 +52,11 @@ article {
 .wp-pagenavi {
   padding: 15px 0;
 }
+
+/* --------------------------------
+ * 検索結果なし、記事なし
+ * -------------------------------- */
+ .no-result, .no-article {
+   font-size: 1.2rem;
+   color: $BASE-COLOR;
+ }

@@ -1,5 +1,5 @@
 <section class="sidebar-wrapper">
-	<h4 class="sidebar-title">プロフィール</h4>
+	<h4 class="sidebar-title">profile</h4>
   <div class="sidebar-profile sidebar-inner">
   	<div class="profile-summary">
       <div class="profile-image">
