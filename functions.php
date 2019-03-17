@@ -19,14 +19,50 @@ add_filter('acf/settings/remove_wp_meta_box', '__return_false');
  * 管理画面に [外観] > [ウィジェット] を表示
  */
 if ( function_exists( 'register_sidebar' ) ) {
-  register_sidebar( array(
-  'name' => 'ウィジェットエリア01',
-  'id' => 'widget_area01',
-  'before_widget' => '<div class=”widget”>',
-  'after_widget' => '</div>',
-  'before_title' => '<h3>',
-  'after_title' => '</h3>'
-  ) );
+
+  register_sidebar(array(
+    'name'          => 'トップページのサイドバー',
+    'id'            => 'sidebar-1',
+    'description'   => 'サイドバー1の説明を入れます。',
+    'class'         => 's1',
+    'before_widget' => '<div class="widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+    'name'          => 'アーカイブページのサイドバー',
+    'id'            => 'sidebar-2',
+    'description'   => 'サイドバー1の説明を入れます。',
+    'class'         => 's1',
+    'before_widget' => '<div class="widget">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+      'name'          => '記事ページのサイドバー',
+      'id'            => 'sidebar-3',
+      'description'   => 'サイドバー2の説明を入れます。',
+      'class'         => 's2',
+      'before_widget' => '<div class="widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h4>',
+      'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+      'name'          => '固定ページのサイドバー',
+      'id'            => 'sidebar-4',
+      'description'   => 'サイドバー2の説明を入れます。',
+      'class'         => 's2',
+      'before_widget' => '<div class="widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h4>',
+      'after_title' => '</h4>',
+  ));
 }
 
 /*
