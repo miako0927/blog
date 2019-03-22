@@ -1,0 +1,296 @@
+
+/* --------------------------------
+ * 記事ページ（single）
+ * -------------------------------- */
+
+.single {
+  .title{
+    padding: 30px 30px 0;
+    font-size: 2.4rem;
+  }
+  .entryInfo {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px 15px;
+    border-bottom: 1px solid $GRAY-BDR-COLOR;
+    .categories a {
+      margin-right: 15px;
+      font-size: 1.2rem;
+      color: $PRIMARY-COLOR;
+    }
+    time {
+      font-size: 0.8rem;
+      color:$GRAY-COLOR;
+    }
+  }
+  #ez-toc-container {
+    padding: 15px 30px;
+    background-color: $PALE-BG-COLOR;
+    .ez-toc-title-container {
+      display: flex;
+      justify-content: space-between;
+      .ez-toc-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+      .ez-toc-title-toggle a {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: relative;
+        .ez-toc-icon-toggle {
+          position: absolute;
+          top: 8px;
+          left: 5px;
+          border-top: 5px solid $BASE3-COLOR;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid transparent;
+        }
+      }
+    }
+    .ez-toc-list {
+      padding: 15px 0 0 0;
+      li {
+        padding-bottom: 15px;
+        list-style-type: none!important;
+        font-size: 1.4rem;
+        &:last-child {padding-bottom: 0;}
+        a {
+          padding-bottom: 10px;
+          color: $BASE3-COLOR;
+        }
+        ul {
+          padding: 0;
+          li {
+            padding: 0 0 0 15px;
+            font-size: 1.2rem;
+            &:last-child {padding-bottom: 0;}
+          }
+        }
+      }
+    }
+  }
+  .content {
+    padding-bottom: 30px;
+    line-height: 1.8;
+    p {
+      font-size: 1.2rem;
+      strong {
+        font-weight: bold;
+      }
+      del {
+        text-decoration: line-through;
+      }
+      em {
+        font-style: italic;
+      }
+    }
+    h1 {
+      font-size: 2.4rem;
+      padding: 20px 0 10px;
+    }
+    h2 {
+      font-size: 2.2rem;
+      padding: 20px 0 10px;
+    }
+    h3 {
+      font-size: 2.0rem;
+      padding: 20px 0 10px;
+    }
+    h4 {
+      font-size: 1.8rem;
+      padding: 20px 0 10px;
+    }
+    h5 {
+      font-size: 1.6rem;
+      padding: 20px 0 10px;
+    }
+    h6 {
+      font-size: 1.4rem;
+      padding: 20px 0 10px;
+    }
+    pre {
+      margin: 10px 0;
+      padding: 10px 15px;
+      background: $BASE-BG-COLOR;
+      font-size: 1.6rem;
+    }
+    ul {
+      padding: 10px 0;
+      li {
+        font-size: 1.2rem;
+        list-style-type: disc;
+      }
+    }
+    ol {
+      padding: 10px 0;
+      li {
+        font-size: 1.2rem;
+        list-style-type: decimal;
+      }
+    }
+    blockquote p {
+      margin: 10px 0;
+      padding: 10px 15px;
+      background: $BASE-BG-COLOR;
+      color: $GRAY-COLOR;
+      font-size: 1.2rem;
+    }
+    a {
+      color: $PRIMARY-COLOR;
+    }
+    hr {
+      margin: 30px 0;
+    	border-top: 1px solid $GRAY-BDR-COLOR;
+    }
+    img.size-full {
+      padding: 10px 0;
+      width: 100%;
+    }
+    img.size-medium {
+      padding: 10px 0;
+      width: 50%;
+    }
+    img.size-thumbnail {
+      padding: 10px 0;
+      width: 150px;
+    }
+  }
+  .comments {
+    h3.comment-reply-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .logged-in-as {
+      display: flex;
+      padding-bottom: 15px;
+      a {
+        color: $PRIMARY-COLOR;
+      }
+    }
+    .comment-form-comment {
+      padding-bottom: 5px;
+      label { display: none; }
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $GRAY-BDR-COLOR;
+        font-size: 1.2rem;
+        color: $BASE3-COLOR;
+      }
+    }
+    .form-submit {
+      text-align: right;
+      padding-bottom: 15px;
+      input[type=submit] {
+        padding: 5px 30px;
+        background-color: $VIVID-BG-COLOR;
+        color: $WHITE-COLOR;
+      }
+    }
+    & > p {
+      font-size: 1.4rem;
+      font-weight: bold;
+      padding-bottom: 15px;
+    }
+    ol.commentlist {
+      li {
+        padding-bottom: 15px;
+        .comment-body {
+          .comment-author {
+            display: flex;
+            align-items: center;
+            img.avatar {
+              width: 35px;
+              height: 35px;
+              margin-right: 10px;
+            }
+            .fn {
+              color: $PRIMARY-COLOR;
+              font-size: 1.4rem;
+            }
+            .says {
+              display: none;
+            }
+          }
+          .commentmetadata {
+            display: flex;
+            padding-left: 45px;
+            a {
+              color: $GRAY-COLOR;
+              font-size: 0.8rem;
+            }
+          }
+          & > p {
+            padding: 15px 0  15px 45px;
+            line-height: 1.8rem;
+          }
+          .reply {
+            display: flex;
+            justify-content: flex-end;
+            a {
+              padding: 5px 30px;
+              background-color: $GRAY-BG-COLOR;
+              color: $WHITE-COLOR;
+            }
+          }
+
+        }
+
+      }
+    }
+
+  }
+  .postNavi {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    .prev,
+    .next {
+      font-size: 1.8rem;
+      color: $PRIMARY-COLOR;
+    }
+    .prev a,
+    .next a {
+      display: inline-block;
+      font-size: 1.2rem;
+      color: $PRIMARY-COLOR;
+    }
+  }
+  .related {
+    .related-heading {
+      padding: 30px 30px 0;
+      font-size: 1.6rem;
+    }
+    .related-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 15px!important;
+      .related-article {
+        flex: 0 0 285px;
+        margin-bottom: 10px;
+        padding: 15px;
+        border: 1px solid $PALEGRAY-BDR-COLOR;
+        .article-title a {
+          padding-bottom: 5px;
+          font-size: 1.4rem;
+          color: $BASE2-COLOR;
+        }
+        .entryInfo {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0;
+          border: none;
+          .post-categories {
+            display: flex;
+            padding-bottom: 5px;
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -949,28 +949,28 @@ header {
 	background: #EEEEEE;
 }
 
-article {
+.loop-main {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	padding-bottom: 15px;
 }
 
-article:last-of-type {
+.loop-main:last-of-type {
 	padding-bottom: 0;
 }
 
-article .visual a {
+.loop-main .visual a {
 	display: block;
 	width: 150px;
 	height: 150px;
 }
 
-article .text {
+.loop-main .text {
 	padding: 10px 0 10px 15px;
 }
 
-article .text .entryInfo {
+.loop-main .text .entryInfo {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -980,19 +980,19 @@ article .text .entryInfo {
 	padding-bottom: 15px;
 }
 
-article .text .entryInfo .categories ul li a {
+.loop-main .text .entryInfo .categories ul li a {
 	font-size: 1.2rem;
 	color: #78CBF3;
 	margin-right: 10px;
 	text-decoration: none !important;
 }
 
-article .text .entryInfo time {
+.loop-main .text .entryInfo time {
 	font-size: 1.0rem;
 	color: #9E9E9E;
 }
 
-article .text .article-title a {
+.loop-main .text .article-title a {
 	font-size: 1.6rem;
 	color: #444444;
 }
@@ -1209,6 +1209,399 @@ article .text .article-title a {
 	float: right;
 	font-size: 1.0rem;
 	color: #9E9E9E;
+}
+
+/* --------------------------------
+ * 記事ページ（single）
+ * -------------------------------- */
+
+.single .title {
+	padding: 30px 30px 0;
+	font-size: 2.4rem;
+}
+
+.single .entryInfo {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 10px 30px 15px;
+	border-bottom: 1px solid #9E9E9E;
+}
+
+.single .entryInfo .categories a {
+	margin-right: 15px;
+	font-size: 1.2rem;
+	color: #78CBF3;
+}
+
+.single .entryInfo time {
+	font-size: 0.8rem;
+	color: #9E9E9E;
+}
+
+.single #ez-toc-container {
+	padding: 15px 30px;
+	background-color: #FAFAFA;
+}
+
+.single #ez-toc-container .ez-toc-title-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.single #ez-toc-container .ez-toc-title-container .ez-toc-title {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.single #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	position: relative;
+}
+
+.single #ez-toc-container .ez-toc-title-container .ez-toc-title-toggle a .ez-toc-icon-toggle {
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	border-top: 5px solid #616161;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+
+.single #ez-toc-container .ez-toc-list {
+	padding: 15px 0 0 0;
+}
+
+.single #ez-toc-container .ez-toc-list li {
+	padding-bottom: 15px;
+	list-style-type: none !important;
+	font-size: 1.4rem;
+}
+
+.single #ez-toc-container .ez-toc-list li:last-child {
+	padding-bottom: 0;
+}
+
+.single #ez-toc-container .ez-toc-list li a {
+	padding-bottom: 10px;
+	color: #616161;
+}
+
+.single #ez-toc-container .ez-toc-list li ul {
+	padding: 0;
+}
+
+.single #ez-toc-container .ez-toc-list li ul li {
+	padding: 0 0 0 15px;
+	font-size: 1.2rem;
+}
+
+.single #ez-toc-container .ez-toc-list li ul li:last-child {
+	padding-bottom: 0;
+}
+
+.single .content {
+	padding-bottom: 30px;
+	line-height: 1.8;
+}
+
+.single .content p {
+	font-size: 1.2rem;
+}
+
+.single .content p strong {
+	font-weight: bold;
+}
+
+.single .content p del {
+	text-decoration: line-through;
+}
+
+.single .content p em {
+	font-style: italic;
+}
+
+.single .content h1 {
+	font-size: 2.4rem;
+	padding: 20px 0 10px;
+}
+
+.single .content h2 {
+	font-size: 2.2rem;
+	padding: 20px 0 10px;
+}
+
+.single .content h3 {
+	font-size: 2.0rem;
+	padding: 20px 0 10px;
+}
+
+.single .content h4 {
+	font-size: 1.8rem;
+	padding: 20px 0 10px;
+}
+
+.single .content h5 {
+	font-size: 1.6rem;
+	padding: 20px 0 10px;
+}
+
+.single .content h6 {
+	font-size: 1.4rem;
+	padding: 20px 0 10px;
+}
+
+.single .content pre {
+	margin: 10px 0;
+	padding: 10px 15px;
+	background: #EEEEEE;
+	font-size: 1.6rem;
+}
+
+.single .content ul {
+	padding: 10px 0;
+}
+
+.single .content ul li {
+	font-size: 1.2rem;
+	list-style-type: disc;
+}
+
+.single .content ol {
+	padding: 10px 0;
+}
+
+.single .content ol li {
+	font-size: 1.2rem;
+	list-style-type: decimal;
+}
+
+.single .content blockquote p {
+	margin: 10px 0;
+	padding: 10px 15px;
+	background: #EEEEEE;
+	color: #9E9E9E;
+	font-size: 1.2rem;
+}
+
+.single .content a {
+	color: #78CBF3;
+}
+
+.single .content hr {
+	margin: 30px 0;
+	border-top: 1px solid #9E9E9E;
+}
+
+.single .content img.size-full {
+	padding: 10px 0;
+	width: 100%;
+}
+
+.single .content img.size-medium {
+	padding: 10px 0;
+	width: 50%;
+}
+
+.single .content img.size-thumbnail {
+	padding: 10px 0;
+	width: 150px;
+}
+
+.single .comments h3.comment-reply-title {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.single .comments .logged-in-as {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-bottom: 15px;
+}
+
+.single .comments .logged-in-as a {
+	color: #78CBF3;
+}
+
+.single .comments .comment-form-comment {
+	padding-bottom: 5px;
+}
+
+.single .comments .comment-form-comment label {
+	display: none;
+}
+
+.single .comments .comment-form-comment textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #9E9E9E;
+	font-size: 1.2rem;
+	color: #616161;
+}
+
+.single .comments .form-submit {
+	text-align: right;
+	padding-bottom: 15px;
+}
+
+.single .comments .form-submit input[type=submit] {
+	padding: 5px 30px;
+	background-color: #78CBF3;
+	color: #ffffff;
+}
+
+.single .comments > p {
+	font-size: 1.4rem;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+
+.single .comments ol.commentlist li {
+	padding-bottom: 15px;
+}
+
+.single .comments ol.commentlist li .comment-body .comment-author {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.single .comments ol.commentlist li .comment-body .comment-author img.avatar {
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
+}
+
+.single .comments ol.commentlist li .comment-body .comment-author .fn {
+	color: #78CBF3;
+	font-size: 1.4rem;
+}
+
+.single .comments ol.commentlist li .comment-body .comment-author .says {
+	display: none;
+}
+
+.single .comments ol.commentlist li .comment-body .commentmetadata {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-left: 45px;
+}
+
+.single .comments ol.commentlist li .comment-body .commentmetadata a {
+	color: #9E9E9E;
+	font-size: 0.8rem;
+}
+
+.single .comments ol.commentlist li .comment-body > p {
+	padding: 15px 0  15px 45px;
+	line-height: 1.8rem;
+}
+
+.single .comments ol.commentlist li .comment-body .reply {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.single .comments ol.commentlist li .comment-body .reply a {
+	padding: 5px 30px;
+	background-color: #9E9E9E;
+	color: #ffffff;
+}
+
+.single .postNavi {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 30px;
+}
+
+.single .postNavi .prev,
+.single .postNavi .next {
+	font-size: 1.8rem;
+	color: #78CBF3;
+}
+
+.single .postNavi .prev a,
+.single .postNavi .next a {
+	display: inline-block;
+	font-size: 1.2rem;
+	color: #78CBF3;
+}
+
+.single .related .related-heading {
+	padding: 30px 30px 0;
+	font-size: 1.6rem;
+}
+
+.single .related .related-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-top: 15px !important;
+}
+
+.single .related .related-inner .related-article {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 285px;
+	flex: 0 0 285px;
+	margin-bottom: 10px;
+	padding: 15px;
+	border: 1px solid #EEEEEE;
+}
+
+.single .related .related-inner .related-article .article-title a {
+	padding-bottom: 5px;
+	font-size: 1.4rem;
+	color: #333333;
+}
+
+.single .related .related-inner .related-article .entryInfo {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	padding: 0;
+	border: none;
+}
+
+.single .related .related-inner .related-article .entryInfo .post-categories {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-bottom: 5px;
 }
 
 @media screen and (max-width: 1023px) {

@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div class="global-wrapper">
   <div class="global-inner">
 
@@ -10,9 +9,9 @@
 
         <!-- 日付別ページの条件分岐 -->
         <?php if( is_month() ): ?>
-          <h1 class="mainSection-heading--blue"><?php the_time('Y年m月'); ?></h1>
+          <h2 class="mainSection-heading--blue"><?php the_time('Y年m月'); ?></h2>
         <?php else: ?>
-          <h1 class="mainSection-heading--blue"><?php wp_title(''); ?></h1>
+          <h2 class="mainSection-heading--blue"><?php wp_title(''); ?></h2>
         <?php endif; ?>
 
   			<div class="mainSection-inner">

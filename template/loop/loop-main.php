@@ -1,7 +1,7 @@
 <?php if ( have_posts() ) : ?><!-- 現在のWordPressクエリにループできる記事があった場合 -->
 	<?php while ( have_posts() ) : the_post(); ?><!-- 投稿数の数だけループ -->
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class('news'); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('loop-main'); ?>>
       <div class="visual">
         <!-- function.phpにadd_theme_support関数を使用 -->
         <?php if(has_post_thumbnail()): ?><!-- サムネイルがあった場合 -->
