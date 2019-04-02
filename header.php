@@ -14,6 +14,7 @@
 	<?php wp_head(); ?><!-- ヘッダーのお約束 -->
 
 	<!-- css -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/styles.css" type="text/css" />
 	<!-- js -->
 	<?php
@@ -60,7 +61,6 @@
   		<!-- <p class="header-description"><?php bloginfo('description'); ?></p> -->
   	</div>
 
-
     <nav class="header-nav">
       <?php
       	$args = array(
@@ -69,7 +69,20 @@
       	);
       	wp_nav_menu($args);
       ?>
+      <ul class="header-socialMenu">
+        <li>
+          <a href="https://twitter.com/mi_zo_n" target="_blank">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://feedly.com/i/subscription/feed/http://mizon.wpblog.jp/feed" target="_blank">
+            <i class="fas fa-rss-square"></i>
+          </a>
+        </li>
+      </ul>
     </nav>
+
   </div>
 </header>
 

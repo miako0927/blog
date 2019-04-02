@@ -8,7 +8,6 @@ header {
   margin: 0 auto;
   padding: 15px 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .header-title {
@@ -26,16 +25,36 @@ header {
   }
 }
 .header-nav {
+  margin-left: auto;
   display: flex;
-  ul {
+  // header-navigation
+  ul.menu {
     display: flex;
     li {
       a {
-        display: block;
-        padding-right: 15px;
+        margin-left: 15px;
         font-size: 1.4rem;
         font-weight: 300;
         color: $PRIMARY-COLOR;
+        transition: .3s;
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+  // sosial-button
+  ul.header-socialMenu {
+    display: flex;
+    li {
+      a {
+        margin-left: 15px;
+        font-size: 1.6rem;
+        color: $PRIMARY-COLOR;
+        transition: .3s;
+        &:hover {
+          opacity: .7;
+        }
       }
     }
   }
