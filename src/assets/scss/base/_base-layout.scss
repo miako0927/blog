@@ -1,4 +1,47 @@
 
+/* --------------------------------
+ * base
+ * -------------------------------- */
+*, *::before, *::after {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.global-wrapper {
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+a {
+  display:block;
+  text-decoration: none;
+}
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.dspNone{
+  display: none!important;
+}
+.hidden{
+  visibility: hidden;
+}
 
 /* --------------------------------
  * body
@@ -13,19 +56,19 @@ body {
 /* --------------------------------
  * modifier
  * -------------------------------- */
-.--pc {
+.pc {
   display: block!important;
   @include max-screen($BREAK-POINT-SM) {
     display: none!important;
   }
 }
-.--sp {
+.sp {
   display: none!important;
   @include max-screen($BREAK-POINT-SM) {
   display: block!important;
   }
 }
-.--fixed {
+.fixed {
   border-top: 0;
   position: fixed;
   z-index: 9999;
