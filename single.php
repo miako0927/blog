@@ -10,7 +10,7 @@
       		<section class="mainSection-wrapper">
 
     				<article id="post-<?php the_ID(); ?>" <?php post_class('single'); ?>>
-    					<h2 class="title"><span><?php the_title(); ?></span></h2>
+    					<h1 class="title"><span><?php the_title(); ?></span></h1>
               <div class="entryInfo">
                 <div class="categories">
                   <?php the_category(); ?>

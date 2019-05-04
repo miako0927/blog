@@ -2,26 +2,15 @@
 	<?php while ( have_posts() ) : the_post(); ?><!-- 投稿数の数だけループ -->
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class('loop-main'); ?>>
-      <div class="visual">
-        <!-- function.phpにadd_theme_support関数を使用 -->
-        <?php if(has_post_thumbnail()): ?><!-- サムネイルがあった場合 -->
-          <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('thumbnail'); ?>
-          </a>
-        <?php else: ?><!-- サムネイルがなかった場合 -->
-          <a href="<?php the_permalink(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/noimage_180x180.png" height="180" width="180" alt="">
-          </a>
-        <?php endif; ?>
-      </div>
 			<div class="text">
 				<div class="entryInfo">
-				    <div class="categories">
-					    <?php the_category(); ?>
-				    </div>
-				    <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date('Y.m.d (D)') ?></time>
+          <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_date('Y.m.d (D)') ?></time>
+			    <div class="categories">
+				    <?php the_category(); ?>
+			    </div>
 				</div>
-				<h1 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				<h3 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <div class="article-excerpt"><?php the_excerpt(); ?></div>
 			</div>
 
 		</article>

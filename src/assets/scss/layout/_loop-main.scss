@@ -4,7 +4,7 @@
  * -------------------------------- */
 
 %mainSection-heading {
-  padding: 15px;
+  padding: 20px;
   font-size: 1.4rem;
   font-weight: 300;
   text-align: center;
@@ -12,50 +12,58 @@
 }
 .mainSection-heading--blue{
   @extend %mainSection-heading;
-  color: $WHITE-COLOR;
-  background: $VIVID-BG-COLOR;
+  color: $GRAY-COLOR;
+  background: $WHITE-BG-COLOR;
+  border-bottom: 1px solid $PALEGRAY-BDR-COLOR;
 }
 .mainSection-heading--gray{
   @extend %mainSection-heading;
-  color: $BASE-COLOR;
-  background: $BASE-BG-COLOR;
+  color: $GRAY-COLOR;
+  background: $WHITE-BG-COLOR;
+  border-bottom: 1px solid $PALEGRAY-BDR-COLOR;
 }
 
 .loop-main {
-  display: flex;
-  padding-bottom: 15px;
-  &:last-of-type {
-    padding-bottom: 0;
-  }
-  //サムネイル画像
-  .visual {
-    a {
-      display: block;
-      width: 150px;
-      height: 150px;
-    }
+  padding: 30px 0;
+  border-bottom: 1px solid $PALEGRAY-BDR-COLOR;
+  &:first-child {
+    padding: 0 0 30px;
   }
   //テキスト
   .text {
-    padding: 10px 0 10px 15px;
+    padding: 10px 0;
     .entryInfo {
       display: flex;
       align-items: center;
       padding-bottom: 15px;
-      .categories ul li a {
-        font-size: 1.2rem;
-        color: $PRIMARY-COLOR;
-        margin-right: 10px;
-        text-decoration: none!important;
-      }
       time {
-        font-size: 1.0rem;
-        color: $GRAY-COLOR;
+        font-size: 1.2rem;
+        color: $PALE-GRAY-COLOR;
+        margin-right: 10px;
       }
+      .categories ul {
+        display: flex;
+        li a {
+          font-size: 1.2rem;
+          color: $PRIMARY-COLOR;
+          margin-right: 10px;
+          text-decoration: none!important;
+        }
+      }
+
     }
     .article-title a {
-      font-size: 1.6rem;
-      color: $BASE-COLOR;
+      font-size: 2.0rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $BASE2-COLOR;
+      padding-bottom: 10px;
+    }
+    .article-excerpt p {
+      font-size: 1.4rem;
+      font-weight: normal;
+      line-height: 1.5;
+      color: $GRAY-COLOR;
     }
   }
 }

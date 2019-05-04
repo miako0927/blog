@@ -86,9 +86,13 @@
   </div>
 </header>
 
-<!-- ヒーローイメージ（トップのみ表示） -->
+<!-- ヒーローイメージ -->
 <?php if( is_home() ): ?>
 	<div class="home-mv"></div>
+<?php elseif (is_page('profile')): ?>
+  <div class="profile-mv"></div>
+<?php elseif (is_page('contact')): ?>
+  <div class="contact-mv"></div>
 <?php endif; ?>
 
 

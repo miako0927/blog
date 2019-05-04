@@ -7,7 +7,7 @@
     <!-- メイン -->
   	<main>
   		<section class="mainSection-wrapper">
-  			<h1 class="mainSection-heading--blue">新着記事一覧</h1>
+  			<h1 class="mainSection-heading--blue">Recent Posts</h1>
   			<div class="mainSection-inner">
   		    <?php get_template_part('template/loop/loop-main'); ?>
   			</div>

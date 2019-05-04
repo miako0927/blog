@@ -109,7 +109,7 @@ function my_pre_get_posts($query) {
     }
     //トップページの場合
     if ( $query->is_home() ) {
-        $query->set( 'posts_per_page', 3 );
+        $query->set( 'posts_per_page', 5 );
         return;
     }
 }
@@ -231,13 +231,13 @@ jQuery(function($) {
       //   return false;
       // }
       // アイキャッチ
-      if ( $('#set-post-thumbnail img').length < 1 ) {
-        alert('アイキャッチ画像を設定してください');
-        $('.spinner').css('visibility', 'hidden');
-        $('#publish').removeClass('button-primary-disabled');
-        $('#set-post-thumbnail').focus();
-        return false;
-      }
+      // if ( $('#set-post-thumbnail img').length < 1 ) {
+      //   alert('アイキャッチ画像を設定してください');
+      //   $('.spinner').css('visibility', 'hidden');
+      //   $('#publish').removeClass('button-primary-disabled');
+      //   $('#set-post-thumbnail').focus();
+      //   return false;
+      // }
     });
   }
 });

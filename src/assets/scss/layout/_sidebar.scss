@@ -4,14 +4,15 @@
  * -------------------------------- */
 .sidebar-wrapper {
   background-color: $WHITE-BG-COLOR;
+  border: 1px solid $PALEGRAY-BDR-COLOR;
   margin-bottom: 30px;
   .sidebar-title {
-    padding: 10px;
-    font-size: 1.4rem;
+    padding: 20px 0 15px;
+    font-size: 1.6rem;
     font-weight: 300;
     color: $BASE-COLOR;
     text-align: center;
-    background-color: $BASE-BG-COLOR;
+    background-color: $WHITE-BG-COLOR;
   }
   .sidebar-inner {
     padding: 15px;
@@ -25,58 +26,46 @@
  * -------------------------------- */
 .sidebar-profile {
   .profile-summary {
-   display: flex;
-   align-items: center;
    padding-bottom: 15px;
    .profile-image {
-     flex: 0 0 100px;
+     width: 60px;
+     height: 60px;
+     margin: 0 auto 15px;
    }
    .profile-name {
-     flex: 1 1 0;
-     font-size: 1.8rem;
+     font-size: 1.6rem;
+     font-weight: 400;
      color: $BASE-COLOR;
      text-align: center;
    }
   }
  .profile-disc {
    font-size: 1.2rem;
+   line-height: 1.8;
    color: $GRAY-COLOR;
-   padding-bottom: 15px;
+   padding-bottom: 10px;
  }
  .profile-morebtn {
    width: 100%;
-   margin-bottom: 15px;
-   padding: 5px;
-   border: 1px solid $PRIMARY-BDR-COLOR;
-   border-radius: 3px;
    font-size: 1.2rem;
    color: $PRIMARY-COLOR;
    text-align: center;
+   padding-bottom: 30px;
 
  }
  .profile-sns {
     display: flex;
+    width: 40%;
+    margin: 0 auto;
     justify-content: space-between;
     li {
-      flex: 0 0 30%;
       a {
-        width: 100%;
-        height: 35px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 20px auto;
-        background-color: $BASE-BG-COLOR;
-        border-radius: 3px;
-        text-align: center;
+        font-size: 1.8rem;
+        color: $PRIMARY-COLOR;
+        transition: .3s;
       }
-      .twitter-icon {
-        background-image: url("../images/twitter-icon.png");
-      }
-      .rss-icon {
-        background-image: url("../images/rss-icon.png");
-      }
-      .mail-icon {
-        background-image: url("../images/mail-icon.png");
+      &:hover {
+        opacity: .7;
       }
     }
  }
@@ -87,7 +76,7 @@
  * -------------------------------- */
 .sidebar-categories, .sidebar-archives {
   li {
-      padding-bottom: 10px;
+      padding-bottom: 15px;
       font-size: 1.2rem;
       color: $GRAY-COLOR;
       &:last-child {padding-bottom: 0;}
@@ -145,7 +134,10 @@
     &:last-child { padding-bottom: 0;}
     a {
       h5 {
+        padding-bottom: 5px;
         font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 1.5;
         color: $BASE3-COLOR;
         text-decoration: underline;
       }
@@ -154,7 +146,41 @@
         font-size: 1.0rem;
         color: $GRAY-COLOR;
       }
-
     }
+  }
+}
+
+
+/* --------------------------------
+ * sidebar table of contents
+ * -------------------------------- */
+
+.sidebar-table {
+  h4 {
+    @extend .sidebar-title;
+  }
+  nav ul.ez-toc-list {
+    @extend .sidebar-inner;
+    li {
+      font-size: 1.2rem;
+      color: $GRAY-COLOR;
+      &:last-child {padding-bottom: 0;}
+      a {
+        padding-bottom: 15px;
+        color: $BASE3-COLOR;
+        text-decoration: underline;
+        display: inline-block;
+        ul {
+          li {
+            a {
+                padding-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  a.active {
+    color: $PRIMARY-COLOR;
   }
 }

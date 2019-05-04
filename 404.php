@@ -12,9 +12,6 @@
           <p class="404">申し訳ございませんが、<a href="<?php echo home_url('/'); ?>">こちらのリンク</a>からトップページにお戻りください。</p>
   			</div>
   		</section>
-
-      <!-- ページナビ -->
-      <?php if( function_exists( 'wp_pagenavi' )){ wp_pagenavi(); } ?>
   	</main>
 
     <!-- サイドバー -->
